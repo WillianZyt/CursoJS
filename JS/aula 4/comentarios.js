@@ -8,4 +8,4 @@ console.log('Ola mundo!'); //Aqui tem outro comentario
 *
 *
 */
-console.log(73.45)
+console.log(73.45);
