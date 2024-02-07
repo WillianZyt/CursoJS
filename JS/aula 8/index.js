@@ -12,6 +12,9 @@ let imc; //peso / (altura * altura)
 let anoNascimento;
 anoNascimento = 1994
 imc = peso / (altura * altura);
-console.log(nome, sobrenome, 'tem ',idade,' anos, pesa ',peso, 'kg');
-console.log('tem ', altura,'de altura e seu IMC é de', imc);
-console.log(nome,sobrenome,'nasceu em', anoNascimento);
+console.log(nome, sobrenome, 'tem ',idade,' anos, pesa ',peso, 'kg.');
+console.log('tem ', altura,'de altura e seu IMC é de', imc, '.');
+// usar + para contatenar
+console.log(nome +' ' + sobrenome + ' nasceu em '+ anoNascimento + '.');
+// TEMPLATE STRING->  usar ${variavel}$, texto entre ``
+console.log(`${nome} ${sobrenome} nasceu em ${anoNascimento}.`);
