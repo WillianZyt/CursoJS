@@ -3,7 +3,7 @@ const numeroTitulo = document.getElementById('numero-titulo');
 const texto = document.getElementById('texto');
 
 numeroTitulo.innerHTML = numero;
-texto.innerHTML = `<p>Raiz quadrada: ${Math.sqrt(numero)}.</p>`;
+texto.innerHTML = `<p>Raiz quadrada: ${Math.sqrt(numero)}.</p>`;        // ou numero **0.5
 texto.innerHTML += `<p>${numero} é inteiro: ${Number.isInteger(numero)}</p>`;
 texto.innerHTML += `<p>É NaN: ${Number.isNaN(numero)}</p>`;
 texto.innerHTML += `<p>Arredondado para baixo: ${Math.floor(numero)}</p>`;
