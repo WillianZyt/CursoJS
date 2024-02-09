@@ -1,8 +1,11 @@
 // Arrays           1       2       3
 const alunos = ['Luiz', 'Maria', 'João'];
 
+// console.log(typeof alunos);     // Objeto
+// console.log(alunos instanceof Array);       // Verificar se é array
+
 // console.log(alunos.slice(0, -2));       // Do 0 até o último elemento -2 ->OBS: Não conta o ultimo elemento, quando positivo .slice(0, 5)= 0,1,2,3
-// console.log(alunos[50]);        // será indefinido
+// console.log(alunos[50]);        // Será indefinido
 
 // delete alunos[2];       // O elemento fica vazio
 
