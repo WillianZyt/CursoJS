@@ -9,7 +9,7 @@ function meuEscopo() {
             const altura = form.querySelector('.altura');
             const imc = peso * (altura * altura);
             console.log(peso, altura);
-            resultado.innerHTML = `<p>Seu IMC é de ${imc}.</p>`
+            resultado.innerHTML = `<p>Seu IMC é de ${imc}.</p>`;
         }
      }
 meuEscopo();
