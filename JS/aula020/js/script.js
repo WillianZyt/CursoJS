@@ -11,7 +11,8 @@ function meuEscopo  ()   {
         const sobrenome = form.querySelector('.sobrenome');
         const peso = form.querySelector('.peso');
         const altura = form.querySelector('.altura');
-        pessoas.push(nome.value, sobrenome.value, peso.value, altura.value);
+        pessoas.push([nome,sobrenome, peso, altura]);
+
     }
     form.addEventListener('submit', recebeEventoForm);
     console.log(pessoas[0]);
