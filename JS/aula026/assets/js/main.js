@@ -1,15 +1,16 @@
-function meuEscopo() {
-    const form = document.querySelector('.form');
-    const resultado = document.querySelector('.resultado');
+// Capturar evento de submit do formulário
+const form = document.querySelector('#formulario');
 
-        function recebeEventoForm (evento)   {
-            evento.preventDefault();
+form.addEventListener('submit', function(e){        //e = evento
+    e.preventDefault();
+    console.log('Evento prevenido.');
+    setResultado('Olá mundo!');
+});
 
-            const peso = form.querySelector('.peso');
-            const altura = form.querySelector('.altura');
-            const imc = peso * (altura * altura);
-            console.log(peso, altura);
-            resultado.innerHTML = `<p>Seu IMC é de ${imc}.</p>`;
-        }
-     }
-meuEscopo();
+function setResultado (msg) {
+    const resultado = document.querySelector('#resultado');
+    resultado.innerHTML = '';
+    const p = document.createElement('p');  //Criar elementro novo-> p= paragrafo
+    p.innerHTML = 'Qualquer coisa.';
+    resultado.appendChild(p);
+}

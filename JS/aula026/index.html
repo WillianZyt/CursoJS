@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Tabela IMC</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <section class="container">
         <h1>Tabela IMC</h1>
-            <p>IMC</p>
-        <form class="form" action="" method="get">
-            <p>Peso<input class="peso" type="number"></textarea></p>
-            <p>Altura<input class="altura" type="number"></textarea></p>
-            <button>Enviar</button>
-            <div class="resultado"></div>
+
+        <form id="formulario" action="/" method="post">
+                <label for="peso">Peso</label>
+                <input type="text" id="peso" name="peso">
+                <label for="altura">Altura</label>
+                <input type="text" id="altura" name="altura">
+            <button type="submit">Enviar</button>
+            <div id="resultado"></div>
         </form>
     </section>
     <script src="./assets/js/main.js"></script>
