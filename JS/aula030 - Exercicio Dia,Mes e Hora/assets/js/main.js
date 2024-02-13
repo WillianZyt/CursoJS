@@ -31,27 +31,27 @@ function getMesTexto(mes) {
     if (mes === 0) {
         return mesTexto= 'Janeiro';
     } else if (mes === 1) {
-        return diaSemanaTexto= 'Fevereiro';
+        return mesTexto= 'Fevereiro';
     } else if (mes === 2) {
-        return diaSemanaTexto= 'Março';
+        return mesTexto= 'Março';
     } else if (mes === 3) {
-        return diaSemanaTexto= 'Abril';
+        return mesTexto= 'Abril';
     } else if (mes === 4) {
-        return diaSemanaTexto= 'Maio';
+        return mesTexto= 'Maio';
     } else if (mes === 5) {
-        return diaSemanaTexto= 'Junho';
+        return mesTexto= 'Junho';
     } else if (mes === 6) {
-        return diaSemanaTexto= 'Julho';
+        return mesTexto= 'Julho';
     } else if (mes === 7) {
-        return diaSemanaTexto= 'Agosto';
+        return mesTexto= 'Agosto';
     } else if (mes === 8) {
-        return diaSemanaTexto= 'Setembro';
+        return mesTexto= 'Setembro';
     } else if (mes === 9) {
-        return diaSemanaTexto= 'Outubro';
+        return mesTexto= 'Outubro';
     } else if (mes === 10) {
         return diaSemanaTexto= 'Novembro';
     } else if (mes === 11) {
-        return diaSemanaTexto= 'Dezembro';
+        return mesTexto= 'Dezembro';
     }
 }
 
@@ -62,3 +62,8 @@ let diaDeHoje = document.querySelector('.diaDeHoje');
 diaDeHoje.innerHTML = `${diaSemanaTexto}, ${dia} de ${mesTexto} de ${ano} </br> ${hora}:${min}`;
 
 console.log(`${diaSemanaTexto}, ${dia} de ${mesTexto} de ${ano} \n ${hora}:${min}`);
+
+
+// Caminho mais rapido, uso de dom
+// const h1 = document.querySelector('.container h1');
+// h1.innerHTML = 'Só para testar';
