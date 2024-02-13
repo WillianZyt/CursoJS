@@ -58,9 +58,7 @@ function getMesTexto(mes) {
 
 let = mesTexto = getMesTexto(mes);
 let = diaSemanaTexto = getDiaSemanaTexto(diaSemana);
-let diaDeHoje =document.querySelector('.diaDeHoje');
+let diaDeHoje = document.querySelector('.diaDeHoje');
 diaDeHoje.innerHTML = `${diaSemanaTexto}, ${dia} de ${mesTexto} de ${ano} </br> ${hora}:${min}`;
-
-
 
 console.log(`${diaSemanaTexto}, ${dia} de ${mesTexto} de ${ano} \n ${hora}:${min}`);
