@@ -1,18 +1,30 @@
-// const elementos = [
-//     {tag: 'p', texto: 'Frase 1'},
-//     {tag: 'div', texto: 'Frase 2'},
-//     {tag: 'footer', texto: 'Frase 3'},
-//     {tag: 'section', texto: 'Frase 4'}
-// ];
-// const {texto: texto0 } = elementos[0];
-// const {texto: texto1 } = elementos[1];
-// const {texto: texto2 } = elementos[2];
-// const {texto: texto3 } = elementos[3];
-// console.log(texto0, texto1, texto2, texto3);
+const elementos = [
+    {tag: 'p', texto: 'Frase 1'},
+    {tag: 'div', texto: 'Frase 2'},
+    {tag: 'footer', texto: 'Frase 3'},
+    {tag: 'section', texto: 'Frase 4'}
+];
 
-const para = document.createElement('p');
-const texto = document.createTextNode('Texto teste!');
-para.appendChild(texto);
+const container = document.querySelector('.container');
+const div = document.createElement('div');
 
-const div = document.getElementById('div1');
-div.innerHTML(para);
+for (let i = 0; i< elementos.length; i++){
+    let { tag, nome } = elementos[i];
+    let tagCriada = document.createElement(tag);
+    tagCriada.innerHTML = texto;
+    div.appendChild(tagCriada);
+}
+container.appendChild(div);
+
+
+// Como eu resolvi
+// function criarParagrafo(msg){
+//     const elementoPai = document.querySelector('.container');
+//     const novoElemento = document.createElement('p');
+//     novoElemento.textContent = msg;
+//     elementoPai.appendChild(novoElemento);
+// }
+//  const p1 = criarParagrafo('Frase 1');
+//  const p2 = criarParagrafo('Frase 2');
+//  const p3 = criarParagrafo('Frase 3');
+//  const p4 = criarParagrafo('Frase 4');
