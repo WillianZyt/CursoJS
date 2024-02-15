@@ -8,6 +8,8 @@ const backgroundColorBody =  estilosBody.backgroundColor;
 
 for (let p of ps){
     p.style.backgroundColor = backgroundColorBody;
+    p.style.fontWeight = 700;
+    p.style.fontStyle = 'italic'
     p.style.color = "white";
     // console.log(p);
 };
