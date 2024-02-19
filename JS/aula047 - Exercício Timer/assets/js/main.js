@@ -3,16 +3,36 @@ const relogio = document.querySelector('.relogio');
 const iniciar = document.querySelector('.iniciar');
 const pausar = document.querySelector('.pausar');
 const zerar = document.querySelector('.zerar');
+let segundos = 0;
+let timer;
 
-relogio.addEventListener('click', function(event){
+function criaHoraDosSegundos(segundos) {
+    const data = new Date(segundos * 1000);
+    return data.toLocaleTimeString('pt-BR', {
+        hour12: false,
+        timeZone: 'GMT'
+    });
+}
 
+function iniciaRelogio() {
+    timer = setInterval(function () {
+        segundos++;
+        relogio.innerHTML = criaHoraDosSegundos(segundos);
+    }, 1000);
+}
+
+function zerarRelogio(){
+    clearInterval();
+}
+
+relogio.addEventListener('click', function (event) {});
+iniciar.addEventListener('click', function (event) {
+    iniciaRelogio();
 });
-iniciar.addEventListener('click', function(event){
-
+pausar.addEventListener('click', function (event) {
+    clearInterval(timer);
+    relogio.fontcolor('red');
 });
-pausar.addEventListener('click', function(event){
-
-});
-zerar.addEventListener('click', function(event){
-
+zerar.addEventListener('click', function (event) {
+    zerarRelogio();
 });
