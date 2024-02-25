@@ -3,13 +3,15 @@
 
 function Pessoa(nome, sobrenome) {
     // // Atributos ou métodos privados
-    this.nome = nome;
-    this.sobrenome = sobrenome;
+    const ID = 123456;
     const metodoInterno = function(){
 
     }
 
     // Atributos ou métodos públicos
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+
     this.metodo = function() {
         console.log(this.nome + ': sou um método.');
     };
