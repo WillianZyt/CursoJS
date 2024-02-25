@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:400,700&display=swap');
+
 :root {
     --primary-color: rgb(17, 86, 102);
     --primary-color-darker: rgb(9, 48, 56);
@@ -26,13 +27,15 @@ body {
     border-radius: 10px;
 }
 
-form input, form labe, form button {
+form input,
+form labe,
+form button {
     display: block;
     width: 100%;
     margin-bottom: 10px;
 }
 
-form input{
+form input {
     font-size: 24px;
     height: 50px;
     padding: 0 20px;
@@ -41,6 +44,7 @@ form input{
 form input :focus {
     outline: 1px solid var(--primary-color);
 }
+
 form button {
     border: none;
     background: var(--primary-color);
@@ -59,23 +63,24 @@ form button:hover {
 .calculadora {
     width: 400px;
 }
-.display{
+
+.display {
     font-size: 2em;
     width: 100%;
     text-align: right;
 }
 
-.btn{
+.btn {
     width: 100%;
     height: 50px;
     font-size: 1em;
     border: none;
     background: #dfdfdf;
-  cursor: pointer;
+    cursor: pointer;
 }
 
-.btn:hover{
-  background: #9e9e9e;
+.btn:hover {
+    background: #9e9e9e;
 }
 
 /* .btn-eq{
