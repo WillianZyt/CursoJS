@@ -13,11 +13,13 @@ function criaCalculadora() {
           console.log(this);
   
           if (el.classList.contains("btn-num")) {
-            this.btnParaDisplay();
+            this.btnParaDisplay(el.innetText);
           }
-        });
+        }.bind(this));
       },
-      btnParaDisplay() {}
+      btnParaDisplay(valor) {
+        this.display.value += valor;
+      }
     };
   }
   
