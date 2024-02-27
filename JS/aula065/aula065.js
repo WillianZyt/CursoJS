@@ -32,10 +32,10 @@ const pessoas = [
   ];
   
   const pessoasComNomeGrande = pessoas.filter(obj => obj.nome.length >= 5);
-  console.log(pessoasComNomeGrande);
+  // console.log(pessoasComNomeGrande);
   
-  const pessoasMaisVelhas = pessoas.filter(valor => valor.idade >= 50);
-  console.log(pessoasMaisVelhas);
-  
-  const pessoasComFinalA = pessoas.filter(obj => obj.nome.search('a'));
+  const pessoasMaisVelhas = pessoas.filter(valor => valor.idade > 50);
+  // console.log(pessoasMaisVelhas);
+
+  const pessoasComFinalA = pessoas.filter(obj => {return obj.nome.toLocaleLowerCase().endsWith('a')});
   console.log(pessoasComFinalA);
