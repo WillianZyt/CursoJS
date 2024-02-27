@@ -23,19 +23,19 @@ const numerosFiltradors = numeros.filter(valor => valor>0);
 // Retorne as pessoas com mais de 50 anos
 // Retorne as pessoas cujo o nome termina com a
 const pessoas = [
-    { nome: "Luiz", idade: 62 },
-    { nome: "Maria", idade: 23 },
-    { nome: "Eduardo", idade: 55 },
-    { nome: "Letícia", idade: 19 },
-    { nome: "Rosane", idade: 32 },
-    { nome: "Wallece", idade: 47 }
-  ];
+  { nome: "Luiz", idade: 62 },
+  { nome: "Maria", idade: 23 },
+  { nome: "Eduardo", idade: 55 },
+  { nome: "Letícia", idade: 19 },
+  { nome: "Rosane", idade: 32 },
+  { nome: "Wallece", idade: 47 }
+];
   
   const pessoasComNomeGrande = pessoas.filter(obj => obj.nome.length >= 5);
-  // console.log(pessoasComNomeGrande);
+  console.log(pessoasComNomeGrande);
   
   const pessoasMaisVelhas = pessoas.filter(valor => valor.idade > 50);
-  // console.log(pessoasMaisVelhas);
+  console.log(pessoasMaisVelhas);
 
   const pessoasComFinalA = pessoas.filter(obj => {return obj.nome.toLocaleLowerCase().endsWith('a')});
   console.log(pessoasComFinalA);
