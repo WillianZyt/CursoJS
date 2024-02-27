@@ -38,3 +38,9 @@ const comIds = pessoas.map(function(obj, indice){
   return obj;
 })
 console.log(pessoas);
+
+// const comIds = pessoas.map(function(obj, indice){
+//     const newObj = { ...obj};
+//     newObj.id = indice;
+//     return newObj;
+//   })
