@@ -10,14 +10,20 @@ const total = numeros.reduce(function (acumulador, valor) {
 }, []);
 // console.log(total);
 
-
-
+// Retorne a pessoa mais velha
 const pessoas = [
-    { nome: "Luiz", idade: 62 },
+    { nome: "Luiz", idade: 62 },  // Laço comeca com esse valor
     { nome: "Maria", idade: 23 },
     { nome: "Eduardo", idade: 55 },
     { nome: "Letícia", idade: 19 },
-    { nome: "Rosane", idade: 32 },
-    { nome: "Wallece", idade: 47 }
+    { nome: "Rosane", idade: 64 },
+    { nome: "Wallece", idade: 63 }
 ];
+
+const maisVelha = pessoas.reduce(function(acumulador, valor){
+  if (acumulador.idade > valor.idade) return acumulador;
+  return valor;
+})
+
+console.log(maisVelha);
 
