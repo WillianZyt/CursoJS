@@ -45,5 +45,6 @@ function Pessoa(nome, sobrenome) {
 }
 // {} <- this
 const p1 = new Pessoa('Luiz', 'Miranda');
+Object.freeze(p1); // para travar o objeto, nao poder alterar
 p1.nome = 'Outra coisa';    //Pode alterar, pois nao mudar endereco da memoria, e sim o valor dentro do objeto
 console.log(p1);
