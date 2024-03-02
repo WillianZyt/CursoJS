@@ -24,7 +24,7 @@ function Produto(nome, preco, estoque) {
 // console.log(p1.estoque);
 
 // factory function
-function criaProduto(valor){
+function criaProduto(nome){
   return{
     get nome(){
       return nome;
@@ -35,4 +35,5 @@ function criaProduto(valor){
   };
 }
 const p2 = criaProduto('Camiseta');
-console.log(p2);
+p2.nome = 'Interceptei, agora é !Qualquer coisa!'
+console.log(p2.nome);
