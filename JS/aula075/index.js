@@ -40,12 +40,24 @@ p2.aumento(10);
 // console.log(p1);
 // console.log(p2);
 
-const p3 = Object.create(Produto.prototype);
-p3.preco = 113;
-p3.aumento(10);
+const p3 = Object.create(Produto.prototype,{
+  valor: {
+    writable: true,
+    configurable: true,
+    enumerable: true,
+    value: 99
+  },
+  tamanho: {
+    writable: true,
+    configurable: true,
+    enumerable: true,
+    value: 42
+  }
+});
+// p3.aumento(10);
 console.log(p3);
-  
-  
+
+//------------------------------------------------------------
 
 // function Pessoa(nome, sobrenome) {
 //   this.nome = nome,
