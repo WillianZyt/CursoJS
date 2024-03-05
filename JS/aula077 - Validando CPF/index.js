@@ -14,26 +14,32 @@ Se o número digito for maior que 9, consideramos 0.
 11 - (284 % 11) = 2 (Primeiro dígito)
 Se o número digito for maior que 9, consideramos 0.
 */
-
-function verificaCPF(num) {
-    let cpf = '705.484.450-52';
+let cpf;
+function verificaCPF(cpf) {
     let cpfLimpo = cpf.replace(/\D+/g, ''); // (/\D+/g, '') -> para remover todo item que NaN
     cpfArray = Array.from(cpfLimpo);
     cpfArray = cpfArray.slice(0, -2);
-    // cpfArray = parseInt(cpfArray);
-    function multiplicaCPF() {
-        this.cpfArray[0] * 10;
-        this.cpfArray[1] * 9;
-        this.cpfArray[2] * 8;
-        this.cpfArray[3] * 7;
-        this.cpfArray[4] * 6;
-        this.cpfArray[5] * 5;
-        this.cpfArray[6] * 4;
-        this.cpfArray[7] * 3;
-        this.cpfArray[8] * 2;aaaaa
+    let primDigDoCPF;
+    valPrimDigDoCPF = (num) => {
+        num = this.cpfArray;
+        function multiplicaCPF() {
+            cpfArray[0] = cpfArray[0] * 10;
+            cpfArray[1] = cpfArray[1] * 9;
+            cpfArray[2] = cpfArray[2] * 8;
+            cpfArray[3] = cpfArray[3] * 7;
+            cpfArray[4] = cpfArray[4] * 6;
+            cpfArray[5] = cpfArray[5] * 5;
+            cpfArray[6] = cpfArray[6] * 4;
+            cpfArray[7] = cpfArray[7] * 3;
+            cpfArray[8] = cpfArray[8] * 2;
+            return cpfArray;
+        }
+        cpfArray = multiplicaCPF(cpfArray).reduce((ac, val) => {
+            return ac + val;
+        }, 0);
+        cpfArray = 11 - (cpfArray % 11);
         return cpfArray;
     }
-    console.log(cpfArray);
+    console.log(valPrimDigDoCPF());
 }
-
-verificaCPF();
+verificaCPF('705.484.450-52');
