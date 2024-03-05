@@ -20,8 +20,7 @@ function verificaCPF(num) {
     let cpfLimpo = cpf.replace(/\D+/g, ''); // (/\D+/g, '') -> para remover todo item que NaN
     cpfArray = Array.from(cpfLimpo);
     cpfArray = cpfArray.slice(0, -2);
-    // console.log(cpfArray);
-    cpfArray = parseInt(cpfArray);
+    // cpfArray = parseInt(cpfArray);
     function multiplicaCPF() {
         this.cpfArray[0] * 10;
         this.cpfArray[1] * 9;
@@ -31,7 +30,7 @@ function verificaCPF(num) {
         this.cpfArray[5] * 5;
         this.cpfArray[6] * 4;
         this.cpfArray[7] * 3;
-        this.cpfArray[8] * 2;
+        this.cpfArray[8] * 2;aaaaa
         return cpfArray;
     }
     console.log(cpfArray);
