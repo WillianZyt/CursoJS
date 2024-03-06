@@ -48,4 +48,4 @@ function verificaCPF(cpf) {
     console.log(cpfArrayString);
     cpfArrayString.length == 11 ? console.log('É um CPF válido') : console.log('Não é um CPF válido');
 }
-verificaCPF('091.759.719-25');
+verificaCPF('705.484.450-52');
