@@ -1,1 +1,1 @@
-    console.log(cpfArray);
+cpfArray[9]

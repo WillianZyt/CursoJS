@@ -39,7 +39,12 @@ function verificaCPF(cpf) {
     }
     primDigDoCPF = valPrimDigDoCPF();
     cpfArray.push(primDigDoCPF);
-    // segDigDoCPF = valPrimDigDoCPF();
-    console.log(cpfArray);
+    segDigDoCPF = valPrimDigDoCPF();
+    cpfArray.push(segDigDoCPF);
+    // console.log(typeof(cpfArray[9]),typeof(cpfArray[8]));
+    // console.log(cpfArray);
+    cpfArray.length <= 10 ? 
+    console.log('É um CPF válido') : 
+    console.log('Não é um CPF válido');
 }
-verificaCPF('705.484.450-52');
+verificaCPF('091.759.719-25');
