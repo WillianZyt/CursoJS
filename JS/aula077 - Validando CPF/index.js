@@ -20,23 +20,26 @@ function verificaCPF(cpf) {
     let cpfArray = Array.from(cpfLimpo);
     cpfArray = cpfArray.slice(0, -2);
     let primDigDoCPF;
+    let segDigDoCPF;
     valPrimDigDoCPF = () => {
-        let primDigCPFArray = cpfArray;
+        let numCPF = cpfArray.map((num) => num);
+        // console.log(numCPF);
         function multiplicaCPF() {
-            for (let i =0; i<primDigCPFArray.length; i++ ){
-                primDigCPFArray[i] = primDigCPFArray[i] * ((primDigCPFArray.length+1) - i);
+            for (let i =0; i<numCPF.length; i++ ){
+                numCPF[i] = numCPF[i] * ((numCPF.length+1) - i);
             }
-            return primDigCPFArray;
+            return numCPF;
         }
-        primDigCPFArray = multiplicaCPF(primDigCPFArray).reduce((ac, val) => {
+        numCPF = multiplicaCPF(numCPF).reduce((ac, val) => {
             return ac + val;
         }, 0);
-        primDigCPFArray = 11 - (primDigCPFArray % 11);
-        primDigDoCPF = primDigCPFArray;
-        return primDigDoCPF;
+        numCPF = 11 - (numCPF % 11);
+        return numCPF;
+        // return primDigDoCPF;
     }
-    primDigDoCPF = valPrimDigDoCPF(cpfArray)
-    cpfArray.push(primDigDoCPF)
+    primDigDoCPF = valPrimDigDoCPF();
+    cpfArray.push(primDigDoCPF);
+    // segDigDoCPF = valPrimDigDoCPF();
     console.log(cpfArray);
 }
 verificaCPF('705.484.450-52');
