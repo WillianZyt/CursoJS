@@ -41,10 +41,11 @@ function verificaCPF(cpf) {
     cpfArray.push(primDigDoCPF);
     segDigDoCPF = valPrimDigDoCPF();
     cpfArray.push(segDigDoCPF);
+    let cpfArrayString = cpfArray.map((el) => { // criei um novo array com map, transformando eles em string
+      return el.toString()
+    });
     // console.log(typeof(cpfArray[9]),typeof(cpfArray[8]));
-    // console.log(cpfArray);
-    cpfArray.length <= 10 ? 
-    console.log('É um CPF válido') : 
-    console.log('Não é um CPF válido');
+    console.log(cpfArrayString);
+    cpfArrayString.length == 11 ? console.log('É um CPF válido') : console.log('Não é um CPF válido');
 }
-verificaCPF('091.759.719-25');
+verificaCPF('091.759.7119-25');
