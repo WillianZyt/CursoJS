@@ -1,3 +1,5 @@
+
+
 function ValidaCPF(cpfEnviado) {
     Object.defineProperty(this, "cpfLimpo", {
       enumerable: true,
