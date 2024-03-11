@@ -5,6 +5,15 @@ function Conta(agencia, conta, saldo) {
     this.conta = saldo;
     this.saldo = saldo;
 }
-Conta.prototype.sacar = function() {};
-Conta.prototype.depositar = function() {};
-Conta.prototype.verSaldo = function() {};
+Conta.prototype.sacar = function(valor) {
+    if(this.saldo < valor);
+    this.verSaldo();
+    return;
+};
+Conta.prototype.depositar = function(valor) {
+    this.saldo += valor;
+    this.verSaldo();
+};
+Conta.prototype.verSaldo = function() {
+    console.log()
+};
