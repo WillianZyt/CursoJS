@@ -26,5 +26,19 @@ class Smartphone extends DispositivoEletronico {   //extends -> para copiar para
         this.modelo = modelo;
     }
 }
-const s1 = new Smartphone('Iphone', 'Preto', 'Galaxy S10')
+
+class Tablet extends DispositivoEletronico {
+    constructor(nome, temWiFi){
+        super(nome);
+        this.temWiFi = temWiFi;
+    }
+    ligar(){
+        console.log('Olha, você alterou o método ligar.')
+    }
+}
+
+const s1 = new Smartphone('Samsung', 'Preto', 'Galaxy S10')
 console.log(s1)
+
+const t1 = new Tablet('iPad', true);
+console.log(t1.ligado)
