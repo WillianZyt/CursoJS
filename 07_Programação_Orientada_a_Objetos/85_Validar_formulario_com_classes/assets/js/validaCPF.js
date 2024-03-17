@@ -40,11 +40,11 @@ class ValidaCPF {
         return this.novoCPF === this.cpfLimpo;
     }
 }
-const validacpf = new ValidaCPF("070.987.720-03");
-console.log(validacpf.valida());
+// const validacpf = new ValidaCPF("070.987.720-03");
+// console.log(validacpf.valida());
 
-if (validacpf.valida()){
-	console.log('CPF válido')
-} else {
-	console.log('CPF válido')
-}
+// if (validacpf.valida()){
+// 	console.log('CPF válido')
+// } else {
+// 	console.log('CPF válido')
+// }
