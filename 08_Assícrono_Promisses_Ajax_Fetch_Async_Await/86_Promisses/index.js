@@ -6,19 +6,27 @@ function rand(min, max) {
 
 function esperaAi(msg, tempo) {
     return new Promise((resolve, reject) => {
+        if (typeof msg !== 'string') reject('BAD VALUE');
         setTimeout(() => {
             console.log(msg);
             resolve();
         }, tempo);
     });
 }
-esperaAi('Frase 1', rand(1, 3)).then(resposta => {
+esperaAi('Conexão com o BD', rand(1, 3))
+    .then(resposta => {
         // console.log(resposta);
-        return esperaAi('Frase 2', rand(1, 3));
+        return esperaAi('Buscando dados da BASE', rand(1, 3));
     })
-    // .then(resposta => {
-    //     console.log(resposta);
-    //     return esperaAi('Frase 3', rand(1, 3));
-    // }).catch();
+    .then(resposta => {
+        // console.log(resposta);
+        return esperaAi(22222, rand(1, 3));
+    }).then(() => {
+        console.log('Exibe dados na tela');
+    })
+    .catch(e =>{
+        console.log('ERRO:', e);
+    });
+console.log('Isso aqui será exibido antes de qualquer promisse.')
 // esperaAi('Frase 2', rand(1, 3))
 // esperaAi('Frase 3', rand(1, 3))
