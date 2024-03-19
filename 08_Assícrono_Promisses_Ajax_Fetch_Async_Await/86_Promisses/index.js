@@ -5,8 +5,8 @@ function rand(min, max) {
 }
 
 function esperaAi(msg, tempo) {
-    return new Promise((resolve, reject) => {
-        if (typeof msg !== 'string') reject('BAD VALUE');
+    return new Promise((resolve, reject) => { // não é obrigatório o uso de 'resolve, reject', mas é o padrão usado pelo dev
+        if (typeof msg !== 'string') reject(new Error('ERRO'));
         setTimeout(() => {
             console.log(msg);
             resolve();
@@ -24,7 +24,7 @@ esperaAi('Conexão com o BD', rand(1, 3))
     }).then(() => {
         console.log('Exibe dados na tela');
     })
-    .catch(e =>{
+    .catch(e =>{    // -> usado para erro
         console.log('ERRO:', e);
     });
 console.log('Isso aqui será exibido antes de qualquer promisse.')
