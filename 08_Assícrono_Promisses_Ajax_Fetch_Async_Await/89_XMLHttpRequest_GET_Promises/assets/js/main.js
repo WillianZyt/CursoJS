@@ -38,16 +38,20 @@ const request = obj => {
   async function carregaPagina(el) {
     const href = el.getAttribute('href');
 
-    const objConfig = {
-      method: 'GET',
-      url: href
-    };
-
-    const response = await request(objConfig);
-    carregResultado(response);
+    // const objConfig = {
+    //   method: 'GET',
+    //   url: href
+    //  };
+    try {
+      const response = await request(objConfig);
+      carregResultado(response);
+    } catch(e){
+        console.log(e);
+      }
       // .then(response => {
       //   carregResultado(response);
       // }).catch(error => console.log(error));
+    }
   }
 
   function carregResultado(response) {
@@ -55,4 +59,3 @@ const request = obj => {
     resultado.innerHTML = response;
   }
 
-}
