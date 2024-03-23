@@ -1,33 +1,51 @@
-  document.addEventListener('click', e => {
-    const el = e.target;
-    const tag = el.tagName.toLowerCase();
+// const request = obj => {
+//   return new Promise((resolve, reject) => {
+//     const xhr = new XMLHttpRequest();
+//     xhr.open(obj.method, obj.url, true);
+//     xhr.send();
 
-    if (tag === 'a') {
-      e.preventDefault();
-      carregaPagina(el);
-    }
-  })
+//     xhr.addEventListener('load', () => {
+//       if (xhr.status >= 200) {
+//         resolve(xhr.responseText);
+//       } else {
+//         reject(xhr.statusText);
+//       }
+//     });
 
-function carregaPagina(el) {
-    const href = el.getAttribute('href');
+//   });
 
-    fetch(href)
-    .then(response=>{
-      if(response.status !== 200) throw new Error('ERROR 404');
-      response.text();
-    })
-    .then(html=>carregResultado(html))
-    .catch(e=> console.log(e));
+document.addEventListener('click', e => {
+  const el = e.target;
+  const tag = el.tagName.toLowerCase();
+
+  if (tag === 'a') {
+    e.preventDefault();
+    carregaPagina(el);
   }
+})
+async function carregaPagina(el) {
+  try {
+  const href = el.getAttribute('href');
+  const response = await fetch(href);
+  if (response.status !== 200) throw new Error('ERRO 404!')
 
-  function carregResultado(response) {
-    const resultado = document.querySelector('.resultado');
-    resultado.innerHTML = response;
-  }
+  const html = await response.text();
+  carregResultado(html);
+} catch(e){
+  console.log(e);
+}
+}
 
-// fetch('pagina1.html')
-//   .then(resposta => {
-//     if (resposta.status !== 200) throw new Error('ERRO 404 NOSSO');
-//   })
-//   .then(html =>console.log(html))
-//   .catch(e => console.log(e));
+//   fetch(href)
+//     .then(response => {
+//       if(response.status !== 200) throw new Error('ERROR 404!');
+//       return response.text();
+//     })
+//       .then(html => carregResultado(html))
+//     .catch(e => console.log(e));
+// }
+
+function carregResultado(response) {
+  const resultado = document.querySelector('.resultado');
+  resultado.innerHTML = response;
+}
