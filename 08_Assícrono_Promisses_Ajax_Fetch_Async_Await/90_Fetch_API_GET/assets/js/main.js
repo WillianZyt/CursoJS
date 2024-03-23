@@ -1,18 +1,3 @@
-// const request = obj => {
-//   return new Promise((resolve, reject) => {
-//     const xhr = new XMLHttpRequest();
-//     xhr.open(obj.method, obj.url, true);
-//     xhr.send();
-
-//     xhr.addEventListener('load', () => {
-//       if (xhr.status >= 200) {
-//         resolve(xhr.responseText);
-//       } else {
-//         reject(xhr.statusText);
-//       }
-//     });
-
-//   });
 
 document.addEventListener('click', e => {
   const el = e.target;
@@ -22,11 +7,13 @@ document.addEventListener('click', e => {
     e.preventDefault();
     carregaPagina(el);
   }
-})
+});
+
 async function carregaPagina(el) {
   try {
   const href = el.getAttribute('href');
   const response = await fetch(href);
+
   if (response.status !== 200) throw new Error('ERRO 404!')
 
   const html = await response.text();
@@ -35,15 +22,6 @@ async function carregaPagina(el) {
   console.log(e);
 }
 }
-
-//   fetch(href)
-//     .then(response => {
-//       if(response.status !== 200) throw new Error('ERROR 404!');
-//       return response.text();
-//     })
-//       .then(html => carregResultado(html))
-//     .catch(e => console.log(e));
-// }
 
 function carregResultado(response) {
   const resultado = document.querySelector('.resultado');
