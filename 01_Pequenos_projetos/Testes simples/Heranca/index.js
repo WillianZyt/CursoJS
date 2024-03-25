@@ -3,15 +3,52 @@ class Veiculo {
     this.tipo = tipo;
     this.marca = marca;
     this.modelo = modelo;
-    this.ano = ano;
   }
-  carroCompleto = function(marca, modelo){
+  carroCompleto = function (marca, modelo) {
     return `Seu veiculo é um ${this.marca} ${this.modelo}?`
   }
 }
 
-const v1 = new Veiculo('Carro', 'Volkswagen', 'Gol')
-Veiculo.prototype.ano
-const v2 = new Veiculo('Onibus', 'Mercedes', 'B400', 2020)
-console.log(v1.ano)
-console.log(`Seu veiculo é um ${v2.tipo} da marca ${v2.marca} e do ano ${v2.ano}`)
+class Onibus extends Veiculo {
+  constructor(tipo, marca, modelo, ano) {
+    super(tipo, marca, modelo),
+      this.ano = ano;
+  }
+  velMaxPerm = function () {
+    console.log(`A velocidade máxima do ${this.marca} ${this.modelo} do ano ${this.ano} é de 90km/h.`);
+  }
+}
+
+Onibus.prototype.TamDaString = function () {
+  const numStr = this.marca.length
+}
+const o1 = new Onibus('Onibus', 'Mercedes', 'B200', 2020);
+
+function primeiraFuncao(){
+  return new Promise((resolve, reject) =>{
+    setTimeout(()=>{
+      console.log('Esperou isso aqui!');
+      resolve();
+    }, 2000)
+  });
+}
+
+async function segundaFuncao(){
+  console.log('Iniciou');
+  await primeiraFuncao();
+  console.log('Terminou');
+}
+// segundaFuncao()
+
+// prático
+function getUser(id){
+  return fetch(`https://reqres.in/api/users?id=${id}`)
+  .then((data) => data.json())
+  .catch((e) => console.log(e))
+}
+
+async function showUserName(id){
+  const user = await getUser(id);
+  console.log(`O nome do usuário é: ${user.data.first_name}`);
+}
+showUserName(3);
