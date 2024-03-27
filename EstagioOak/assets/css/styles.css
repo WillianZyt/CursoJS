@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(145, 238, 121);
+  }
+  form {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  form input,
+  form label,
+  form button {
+    display: block;
+    width: 400px;
+    height: 20px;
+    margin-bottom: 10px;
+  }
+  form button {
+    background: grey;
+    color: #fff;
+    font-size: 18;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  .desc-prod {
+    height: 80px;
+  }
+  .novalinha{
+    font-weight:bolder;
+  }
